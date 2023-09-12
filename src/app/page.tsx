@@ -1,8 +1,15 @@
+import HomeContainer from '@/containers/home'
 import '@/styles/global.css'
+import Articles from '@/mocks/articles.json'
+import Article from '@/models/response/article'
 
-export default function Home() {
+const HomePage = async () => {
+  const articles: Article[] = Articles.articles
   return (
-    <main>
-    </main>
+    <div>
+      <HomeContainer articles={articles} />
+    </div>
   )
 }
+
+export default HomePage

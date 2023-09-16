@@ -1,7 +1,9 @@
+import { WebSiteType } from "@/models/enums/WebSiteType"
 import EarthquakeRequest from "@/models/request/EarthquakeRequest"
+import EarthquakeResponse from "@/models/response/EarthquakeResponse"
 import PaginatedResponse from "@/models/response/PaginatedResponse"
 
-const baseUrl = process.env.BASE_URL
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
 
 const getRequest = async (path: string, params?: { key: string, value: any }[]): Promise<any> => {
     try {
@@ -19,6 +21,13 @@ const getRequest = async (path: string, params?: { key: string, value: any }[]):
     }
 }
 
+const getEarthquakes = async (siteType: WebSiteType): Promise<EarthquakeResponse[]> => {
+    const path = `/earthquakes?webSiteType=${siteType}`
+    console.log("path")
+    console.log(path)
+    return getRequest(path)
+}
+
 const getEarthquakesWithPaginated = async (model: EarthquakeRequest): Promise<PaginatedResponse> => {
     const path = `/earthquakes/paginated`
     const params = [
@@ -30,5 +39,6 @@ const getEarthquakesWithPaginated = async (model: EarthquakeRequest): Promise<Pa
 }
 
 export {
+    getEarthquakes,
     getEarthquakesWithPaginated
 }

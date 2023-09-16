@@ -1,0 +1,44 @@
+
+#pagination {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#pagination>* {
+  font-family: 'Poppins';
+}
+
+#pagination ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+#pagination ul li {
+  color: #fff;
+  display: flex;  
+}
+
+#pagination ul li a {
+  background-color: #444B6E;
+  padding: 5px 10px;
+  border: 2px solid #3D315B;
+  border-right: 0;
+}
+
+#pagination ul li.active a {
+  background-color: #9AB87A;
+}
+
+#pagination ul li:first-child a {
+  border-radius: 5px 0 0 5px;
+}
+
+#pagination ul li:last-child a {
+  border-radius: 0 5px 5px 0;
+  border-right: 2px solid #3D315B;
+}

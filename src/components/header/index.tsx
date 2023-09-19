@@ -12,8 +12,8 @@ const Header = () => {
           <FaGlobe /> Earthquake App
         </Link>
         <nav className={Styles.navigationMenu}>
-          <Link href={`/${WebSiteType[1]}?page=0`}>Afad</Link>
-          <Link href={`/${WebSiteType[2]}?page=0`}>Kandilli</Link>
+          <Link href={`/${WebSiteType[1]}?page=1`}>Afad</Link>
+          <Link href={`/${WebSiteType[2]}?page=1`}>Kandilli</Link>
           <Link href="/map">Harita</Link>
         </nav>
       </div>

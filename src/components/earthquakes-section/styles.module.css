@@ -1,0 +1,25 @@
+.earthquakesBody {
+    -webkit-box-shadow: -3px 22px 37px 0px rgba(0, 0, 0, 0.63);
+    -moz-box-shadow: -3px 22px 37px 0px rgba(0, 0, 0, 0.63);
+    box-shadow: -3px 22px 37px 0px rgba(0, 0, 0, 0.63);
+    width: 100%;
+    color: black;
+    height: fit-content;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: white;
+    padding: 15px;
+    display:flex;
+    flex-direction: column;
+}
+.earthquakesTable {  
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: white;
+    padding: 0%;
+    color: black;
+    text-align: center;
+    margin-bottom: 10px;
+}

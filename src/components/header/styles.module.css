@@ -1,7 +1,11 @@
 .header {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    background-color: #ffff;
+   margin-bottom: 5px;
+   -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+   -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
   }
-  
+
   .headerWrapper {
     display: flex;
     align-items: center;
@@ -12,16 +16,17 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 700;
     letter-spacing: -1px;
-    color: #fafafa;
+    color: #0054a6;
   }
   
   .navigationMenu {
     display: flex;
     gap: 48px;
-    color: #fafafa;
-    font-weight: 700;
+    color: #13183e;
+    font-size: 18px;
+    font-weight: bold;
     letter-spacing: 2px;
   }

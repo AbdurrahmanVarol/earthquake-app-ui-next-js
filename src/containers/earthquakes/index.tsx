@@ -16,17 +16,19 @@ interface EarthquakesContainerProps {
 const MapComponent = dynamic(() => import("@/components/map"), { ssr: false })
 const EarthquakesContainer = ({ type, currentPage, earthquakes, paginatedEarthquakes }: EarthquakesContainerProps) => {
     return (
-        <div style={{ height: "100%" }}>
+        <div style={{ height: "100%", padding: 5 }}>
             <MapComponent
                 height={"40%"}
                 earthquakes={earthquakes}
             />
-            <EarthquakeSection
-                type={type}
-                height={"50%"}
-                currentPage={currentPage}
-                paginatedEarthquakes={paginatedEarthquakes}
-            />
+
+            <div className=''>
+                <EarthquakeSection
+                    type={type}
+                    currentPage={currentPage}
+                    paginatedEarthquakes={paginatedEarthquakes}
+                />
+            </div>
         </div>
     )
 }

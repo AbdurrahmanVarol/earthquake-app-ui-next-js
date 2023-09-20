@@ -12,9 +12,9 @@ const Header = () => {
           <FaGlobe /> Earthquake App
         </Link>
         <nav className={Styles.navigationMenu}>
+          <Link href="/">Home</Link>
           <Link href={`/${WebSiteType[1]}?page=1`}>Afad</Link>
           <Link href={`/${WebSiteType[2]}?page=1`}>Kandilli</Link>
-          <Link href="/map">Harita</Link>
         </nav>
       </div>
     </header>

@@ -10,13 +10,13 @@ const EarthquakesPage = async ({ params, searchParams }: any) => {
     const [earthquakes, paginatedEarthquakes] = await Promise.all([
         getEarthquakes(type),
         getEarthquakesWithPaginated({
-            index: currentPage,
+            index: currentPage - 1,
             siteType: type,
             size: 15
         }),
     ])
     return (
-        <div>
+        <div className='fluid'>
             <EarthquakesContainer
                 currentPage={Number(searchParams.page)}
                 type={type}

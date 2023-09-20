@@ -1,7 +1,6 @@
-import { Inter } from 'next/font/google'
 import '@/styles/reset.css'
 import '@/styles/global.css'
-import "leaflet/dist/leaflet.css"
+import { Inter } from 'next/font/google'
 import Header from '@/components/header'
 const inter = Inter({ subsets: ['latin'] })
 

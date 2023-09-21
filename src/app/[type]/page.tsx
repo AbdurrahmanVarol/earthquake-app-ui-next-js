@@ -6,10 +6,18 @@ import { notFound } from 'next/navigation';
 
 const EarthquakesPage = async ({ params, searchParams }: any) => {
     const isExitst = Object.values(WebSiteType).includes(params.type)
+    console.log(searchParams)
+    console.log(searchParams.error)
+    console.log(searchParams.error && searchParams.error == 'true')
+    if (searchParams.error && searchParams.error == 'true') {
+        throw new Error("error")
+    }
+
     console.log(isExitst)
     if (!isExitst) {
         notFound()
     }
+
     const type = WebSiteType[params.type as keyof typeof WebSiteType]
     const currentPage = Number(searchParams.page)
 
@@ -21,6 +29,9 @@ const EarthquakesPage = async ({ params, searchParams }: any) => {
             size: 15
         }),
     ])
+    if (currentPage < 0 || currentPage > paginatedEarthquakes.pages) {
+        notFound()
+    }
     return (
         <div className='fluid'>
             <EarthquakesContainer

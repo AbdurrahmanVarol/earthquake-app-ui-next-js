@@ -16,7 +16,8 @@ const Earthquakes500 = () => {
                 color: "#B70404"
             }}
         >
-            <h1>Özür dileriz. Beklenmedik bir hata meydana geldi.</h1>
+            <h1 style={{ fontSize: 100 }}>500</h1>
+            <h2>Özür dileriz. Beklenmedik bir hata meydana geldi.</h2>
             <div style={{ width: "100%", display: "flex", flexDirection: "row", gap: 5, justifyContent: "center", color: "#3C486B" }}>
                 <Link
                     href="/"

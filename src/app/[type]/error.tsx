@@ -13,10 +13,11 @@ const Earthquakes500 = () => {
                 alignItems: "center",
                 justifyContent: "center",
                 flexDirection: "column",
+                color: "#B70404"
             }}
         >
             <h1>Özür dileriz. Beklenmedik bir hata meydana geldi.</h1>
-            <div style={{ width: "100%", display: "flex", flexDirection: "row", gap: 5, justifyContent: "center" }}>
+            <div style={{ width: "100%", display: "flex", flexDirection: "row", gap: 5, justifyContent: "center", color: "#3C486B" }}>
                 <Link
                     href="/"
                     style={{ textDecoration: "underline", fontSize: 20, marginTop: 8 }}
@@ -25,7 +26,7 @@ const Earthquakes500 = () => {
                 </Link>
                 <button
                     onClick={() => { router.refresh() }}
-                    style={{ color: "white", textDecoration: "underline", fontSize: 20, marginTop: 8 }}
+                    style={{ textDecoration: "underline", fontSize: 20, marginTop: 8 }}
                 >
                     Yeniden Yükle
                 </button>

@@ -1,10 +1,12 @@
 import React from 'react'
 import Skeleton from '../skeleton'
+import Spinner from '../spinner'
 
 const MapLoading = () => {
     return (
-        <div>
-            <Skeleton height={350} />
+        <div style={{ height: '50%', marginBottom: 10 }}>
+            <Spinner />
+            {/* <Skeleton height={350} /> */}
         </div>
     )
 }

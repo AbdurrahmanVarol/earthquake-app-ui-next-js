@@ -2,8 +2,14 @@ import React from 'react'
 import { getEarthquakesWithPaginated, getEarthquakes } from '@/services/earthquakeService'
 import { WebSiteType } from '@/models/enums/WebSiteType'
 import EarthquakesContainer from '@/containers/earthquakes';
+import { notFound } from 'next/navigation';
 
 const EarthquakesPage = async ({ params, searchParams }: any) => {
+    const isExitst = Object.values(WebSiteType).includes(params.type)
+    console.log(isExitst)
+    if (!isExitst) {
+        notFound()
+    }
     const type = WebSiteType[params.type as keyof typeof WebSiteType]
     const currentPage = Number(searchParams.page)
 

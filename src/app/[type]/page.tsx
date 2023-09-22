@@ -9,6 +9,7 @@ const EarthquakesPage = async ({ params, searchParams }: any) => {
     console.log(searchParams)
     console.log(searchParams.error)
     console.log(searchParams.error && searchParams.error == 'true')
+
     if (searchParams.error && searchParams.error == 'true') {
         throw new Error("error")
     }
